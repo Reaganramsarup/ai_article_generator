@@ -71,7 +71,7 @@ def download_audio(link):
 
 def get_transcription(link):
     audio_file = download_audio(link)
-    aai.settings.api_key = "8ac8f88883ea48a7868244dd5a88d8ee"
+    aai.settings.api_key = "key"
 
     transcriber = aai.Transcriber()
     transcript = transcriber.transcribe(audio_file)
@@ -84,7 +84,7 @@ def generate_blog_from_transcription(transcription):
 
     client = OpenAI(
     # This is the default and can be omitted
-    api_key="sk-proj-HoCpBz7qGGMyvn7xzOrCT3BlbkFJSuK4MyyOiYdGehfTEUzv",
+    api_key="key",
 )
 
     response = client.chat.completions.create(
